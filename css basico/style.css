@@ -58,12 +58,13 @@ O margin empurra tendo como limite a propria borda e borda do outro elemento mai
   display: block;
   color: white;
   background-color: black;
-
   width: 100px;
   height: 100px;
 }
 
 .h {
+  /* o tamanho default da fonte dos arquivos html é de 16px, daí será baseado inicialmente a unidade em.
+  logo 1em = 16px por padrão usando em sempre se tem a multiplicação das tags filhas concomitantemente*/
 }
 
 .i {
