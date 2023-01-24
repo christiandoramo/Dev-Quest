@@ -1,0 +1,70 @@
+/* espaçamento entre um elemento e outro - usar margin
+espaçamento entre um elemento e seu contorno/borda - usar padding 
+contorno/borda - usar border 
+ATENÇÃO!!!
+O margin empurra tendo como limite a propria borda e borda do outro elemento mais proximo
+*/
+* {
+  margin: 0px;
+}
+
+.a {
+  margin: 25px 20px 15px 10px;
+  /*margin gira em sentido horária -> top, right, bottom, left*/
+  background-color: red;
+}
+
+.b {
+  margin: 30px 20px 10px;
+  /* top- 30px(left and right - 20px) bottom - 10px */
+  background-color: blue;
+  padding: 10px 20px;
+}
+
+.c {
+  margin: 20px 10px;
+  background-color: green;
+  padding: 10px 20px;
+  border-style: dashed;
+  border-top: solid;
+  border-top-color: cyan;
+  border-top-width: 10px;
+}
+
+.d {
+  margin: 10px;
+  padding: 10px;
+  background-color: yellow;
+  border: 5px dashed;
+  /* também no sentido horario */
+  border-color: blue black red green;
+}
+.e {
+  /* width, style, color */
+  border: 20px solid brown;
+}
+
+.f {
+  /* normalmente já vem com display block(<p>); mas o elemento span já vem inline*/
+  display: inline;
+  /* width e height não funciona em display inline*/
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: black;
+}
+
+.g {
+  display: block;
+  color: white;
+  background-color: black;
+
+  width: 100px;
+  height: 100px;
+}
+
+.h {
+}
+
+.i {
+}
