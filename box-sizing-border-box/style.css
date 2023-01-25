@@ -1,0 +1,21 @@
+div {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 10px solid green;
+  margin: 20px;
+}
+
+.com-border-box {
+  background-color: aquamarine;
+  box-sizing: border-box;
+  /*aqui realmente a width e height especificados são definidos literalmente em relação ao box,
+  ignorando o padding e border, mas descontando do centro do elemento em si para fazer o calculo do box
+  largura total = 100px(width) = 10px(padding-esquerda) + 10px(padding-direita) + 10px(borda-esquerda) + 10px(borda-direita) + 60px(elemento) = 100px */
+}
+.sem-border-box {
+  background-color: brown;
+  /* largura total = 100px(width) + 10px(padding-esquerda) + 10px(padding-direita) + 10px(borda-esquerda) + 10px(borda-direita) = 140px ou seja, fica praticamente dificil de calcular o tamanho dos elementos sem o border-box
+  o mesmo para a altura -> o height que especificamos não é literalmente especificado sem border-box
+  */
+}
