@@ -1,0 +1,25 @@
+.tabela {
+  margin: 10px 0px;
+  color: white;
+  font-size: 1.5em;
+
+}
+.tabela th {
+  padding: 7.5px;
+  border: 1px solid white;
+}
+.tabela td {
+  padding: 7.5px;
+  background-color: #424250;
+  border: 1px solid white;
+}
+.tabela.moda th {
+  background-color: #bb86fc;
+}
+.tabela.casa th {
+  background-color: #00c4b4;
+}
+.titulo-tabela{
+    font-size: 1.5em;
+    margin:10px
+}
