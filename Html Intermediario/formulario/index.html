@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Intermediário</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap/css/estilo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <h1>Cadastre-se</h1>
+          <p>É rapido e fácil</p>
+        </div>
+        <div class="card-body">
+          <!-- action pra onde vão os dados | method=tratamento do dado -->
+          <form method="POST" action="index.html" enctype="multipart/form-data">
+            <input
+              class="campo dados"
+              id="nome"
+              placeholder="Nome"
+              type="text"
+              name="nome"
+              required
+            />
+            <input
+              class="campo dados"
+              id="sobrenome"
+              placeholder="Sobrenome"
+              type="text"
+              name="sobrenome"
+            />
+            <br />
+            <input
+              class="campo dados"
+              id="celular-ou-email"
+              placeholder="Celular ou Email"
+              type="text"
+              name="celular-ou-email"
+            />
+            <br />
+            <input
+              class="campo dados"
+              id="senha"
+              placeholder="Nova Senha"
+              type="password"
+              name="senha"
+              required
+            />
+            <p class="campo label">Data de Nascimento</p>
+            <select
+              class="selecao nascimento"
+              name="dia-nascimento"
+              id="dia-nascimento"
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <select
+              class="selecao nascimento"
+              name="mes-nascimento"
+              id="mes-nascimento"
+            >
+              <option value="jan">janeiro</option>
+              <option value="fev">fevereiro</option>
+              <option value="mar">março</option>
+              <option value="abr">abril</option>
+              <option value="mai">maio</option>
+            </select>
+            <select
+              class="selecao nascimento"
+              name="ano-nascimento"
+              id="ano-nascimento"
+            >
+              <option value="1998">1998</option>
+              <option value="2000">2000</option>
+              <option value="3000">3000</option>
+              <option value="4000">4000</option>
+              <option value="5000">5000</option>
+            </select>
+            <p class="campo label">Gênero</p>
+            <div class="btn gender">
+              <label for="Feminino">Feminino</label>
+              <input
+                type="radio"
+                name="genero"
+                id="Feminino"
+                value="Feminino"
+                checked
+              />
+            </div>
+            <div class="btn gender">
+              <label for="Masculino">Masculino</label>
+              <input
+                type="radio"
+                name="genero"
+                id="Masculino"
+                value="Masculino"
+              />
+            </div>
+            <div class="btn gender">
+              <label for="Personalizado">
+                Personalizado
+              </label>
+              <input
+                type="radio"
+                name="genero"
+                id="Personalizado"
+                value="Personalizado"
+              />
+            </div>
+            <br />
+            <div>
+              <label class="espaco imagem" for="foto">
+                Escolha a sua foto de perfil
+              </label>
+              <input id="foto" type="file" />
+              <!-- type= file requer um tipo de encriptação de dados no form do htlm - enctype -->
+            </div>
+            <p class="termos">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+              quam quibusdam ipsam harum esse ipsa doloremque explicabo. Maiores
+              dolorum, ullam vel nesciunt alias molestiae maxime, modi
+              laboriosam aperiam tempore consequatur.
+            </p>
+            <button class="btn btn-success">Cadastre-se</button>
+          </form>
+        </div>
+        <footer>&copyFakebook</footer>
+      </div>
+    </div>
+  </body>
+</html>

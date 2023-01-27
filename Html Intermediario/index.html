@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Intermediário</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+  <body>
+    <div>
+      <h3>Entre com os dados</h3>
+      <!-- o for corresponde ao ID do input e não ao name -->
+      <label for="nome">Nome</label>
+      <input id="nome" placeholder="insira seu nome" type="text" name="nome" />
+      <label for="email">Email</label>
+      <input
+        id="email"
+        placeholder="insira seu email"
+        type="text"
+        name="email"
+      />
+      <label for="telefone">Telefone</label>
+      <input
+        id="telefone"
+        placeholder="insira seu telefone"
+        type="number"
+        name="telefone"
+      />
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        placeholder="insira suar senha"
+        type="password"
+        name="senha"
+      />
+    </div>
+    <div>
+      <h3>Linguagens</h3>
+      <label for="js">JavaScript</label>
+      <input type="checkbox" name="langs" id="js" />
+      <label for="c++">C++</label>
+      <input type="checkbox" name="langs" id="c++" />
+    </div>
+    <div>
+      <h3>Preferência de salário</h3>
+      <label for="ummil">R$ 1000,00</label>
+      <input type="radio" name="salario" id="ummil" />
+      <label for="doismil">R$ 2000,00</label>
+      <input type="radio" name="salario" id="doismil" />
+      <label for="tresmil">R$ 3000,00</label>
+      <input type="radio" name="salario" id="tresmil" />
+    </div>
+    <div>
+      <label for="filmes">Seu filme favorito</label>
+      <!-- com o multiple na tag select é possivel marcar varias opções ao pressionar ctrl -->
+      <select name="filmes" id="filme-favorito">
+        <option value="">selecione um movie</option>
+        <option value="senhor do chanel">senhor do anel</option>
+        <option value="réuri do póter">réuri do póter</option>
+        <option value="medico max">medico max</option>
+      </select>
+    </div>
+    <div>
+      <label for="textao">Bio</label>
+      <textarea
+        placeholder="Escreva sua Bio aqui"
+        name="textao"
+        id="textao"
+        cols="50"
+        rows="10"
+      >
+Minha bio</textarea
+      >
+    </div>
+    <div>
+      <button onclick="alert('olá')">
+        Diga olá button
+      </button>
+    </div>
+    <div>
+      <input type="button" value="Diga olá input" onclick="alert('olá')" />
+    </div>
+    <div>
+      <input id="submit" type="submit" value="Confirmar" />
+    </div>
+  </body>
+</html>

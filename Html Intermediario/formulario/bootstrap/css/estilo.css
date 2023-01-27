@@ -1,0 +1,32 @@
+body {
+  background-color: cyan;
+}
+.btn.gender {
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+p {
+  display: flex;
+}
+.selecao.nascimento {
+  padding: 5px;
+}
+.campo.label {
+  margin-top: 10px;
+}
+.campo.dados {
+  margin-bottom: 5px;
+  margin-right: 3px;
+}
+.termos {
+  margin-top: 15px;
+  text-align: left;
+}
+.espaco.imagem {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+}
+footer{
+  margin: 0 auto;
+}

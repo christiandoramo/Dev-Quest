@@ -1,0 +1,18 @@
+body {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+label {
+  display: flex;
+  margin-top: 15px;
+  padding: 10px;
+}
+input {
+  display: flex;
+}
+div{
+    margin: 20px;
+}
+input#submit{
+    margin: 100px;
+}
