@@ -1,0 +1,67 @@
+h1,
+h4 {
+  text-align: center;
+}
+p {
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.fundo {
+  background-color: rgb(246, 107, 107);
+}
+.fundo-transform {
+  background-color: rgb(111, 102, 238);
+}
+.fundo-alinhamento {
+  background-color: rgb(241, 241, 109);
+}
+
+.alinhado-esquerda {
+  text-align: left;
+}
+.alinhado-centro {
+  text-align: center;
+}
+.alinhado-direita {
+  text-align: right;
+}
+.alinhado-justificado {
+  text-align: justify;
+}
+
+/* não justificado vem depois do justificado */
+
+.maiuscula {
+  text-transform: uppercase;
+}
+.minuscula {
+  text-transform: lowercase;
+}
+.capitalizado {
+  text-transform: capitalize;
+}
+
+.sublinhado {
+  text-decoration: underline;
+}
+.linha-sobreposta {
+  text-decoration: line-through;
+}
+.sem-text-decoration {
+  text-decoration: none;
+}
+.sem-text-decoration:hover {
+  cursor: default;
+}
+
+.altura-entre-linhas {
+  line-height: 40px;
+}
+
+.sombra-de-texto {
+  background-color: rgba(138, 254, 153, 0.917);
+  /* lateral - vertical - bluer - cor*/
+  text-shadow: 5px 5px 1px rgba(75, 52, 141, 0.539);
+}
