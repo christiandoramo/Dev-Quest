@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 24px;
+}
+ul {
+  margin-bottom: 50px;
+}
+.block li {
+  /* display: block;  ja vem por padrão no li*/
+  /* ocupa exatamente toda a dimensão definida - no caso a div ocupa o tamanho do body ou com 100px a div ocupa todo o tamanho 100px */
+  background-color: cyan;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100px;
+}
+.inline li {
+  /*tamanhos não funcionam em display inline */
+  display: inline;
+  background-color: aquamarine;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100px;
+}
+.inline-block li {
+  /* semelhante ao block, mas os elementos vão ocupando espaço no sentido de uma linha */
+  display: inline-block;
+  background-color: orange;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.none li {
+  /* nem é visivel */
+  display: none;
+  background-color: green;
+  margin-bottom: 10px;
+  height: 100px;
+  width: 100px;
+}

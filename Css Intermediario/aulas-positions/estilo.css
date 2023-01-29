@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+}
+
+.position {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.position.static{
+  /* static já vem por padrão */
+  /* position:static; */
+  left: 100px;
+  background-color: red;
+}
+.position.relative{
+  /* relative da espaçamento em relação as suas margens */
+  position:relative;
+  right:10px;
+  bottom:10px;
+  background-color: green;
+
+}
+.position.absolute{
+  /* se posiciona na tela de acordo com a classe pai sempre, sendo muito diferente do relative */
+  position:absolute;
+  right: 10px;
+  bottom:10px;
+  background-color: blue;
+}

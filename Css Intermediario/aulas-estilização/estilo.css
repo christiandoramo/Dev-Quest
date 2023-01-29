@@ -1,0 +1,71 @@
+* {
+  margin: 10px 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  background-color: cyan;
+}
+
+a:visited {
+  color: orange;
+}
+a:active {
+  color: red;
+}
+a:hover {
+  background-color: black;
+}
+
+ul {
+  list-style-type: circle;
+  list-style-image: url('img/07\ icone.png');
+  list-style-position: outside;
+  list-style: square inside url('img/07\ icone.png');
+}
+ul li {
+  background-color: cyan;
+}
+ol li {
+  list-style-position: inside;
+  background-color: orange;
+}
+li {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+div {
+  padding: 10px;
+}
+
+.bg {
+  background-color: orange;
+  background-image: url('img/08\ cat.png');
+}
+.bg-image {
+  width: 513px;
+  height: 340px;
+}
+.bg-size-cover {
+  /* cobre sempre toda a extensão do elemento em questão (no caso a div) */
+  background-size: cover;
+  /* a imagem ultrapassou a tela, distorcendo a imagem - não usar o cover */
+  height: 540px;
+}
+.bg-fixed {
+  background-attachment: fixed;
+  /* background-attachment: scroll; */
+  height: 540px;
+  background-repeat: no-repeat;
+}
+.bg-position {
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: 540px;
+  background: cyan url('img/08\ cat.png') no-repeat right bottom;
+}
