@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+
+.container {
+  height: 300px;
+  background-color: aquamarine;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 250px;
+  height: 50px;
+  background-color: rebeccapurple;
+  color: white;
+  font-size: 1.2em;
+}
+.texto.centralizado-1 {
+  width: 250px;
+  height: 250px;
+  background-color: orange;
+  text-align: center;
+  line-height: 250px;
+}
+.texto.centralizado-2 {
+  position: absolute;
+  top: 50%; /*espaçou 50% pra baixo */
+  transform: translateY(
+    -50%
+  ); /* espaçou 50% pra cima dentro do tamanho do proprio elemento */
+  transform: translateX(-50%);
+  left: 50%;
+}
+.btn.alinhado-margin-auto {
+  display: block;
+  margin: auto;
+}
+
+.btn.alinhado-absolute {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container-text-align{
+  /* só funciona usando elemento pai e inline*/
+  text-align: center;
+}

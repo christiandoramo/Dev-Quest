@@ -1,0 +1,10 @@
+.fa-square-instagram {
+  color: blue;
+}
+.fa-square-instagram:hover {
+  color: orange;
+  font-size: 20px;
+}
+.fa-instagram {
+  color: red;
+}
