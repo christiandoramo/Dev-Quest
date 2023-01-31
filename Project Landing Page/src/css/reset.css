@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Source Serif Pro';
+  src: url('../fonts/SourceSerifPro/SourceSerifPro-Regular.ttf'),
+    url('../fonts/SourceSerifPro/SourceSerifPro-Light.ttf'),
+    url('../fonts/SourceSerifPro/SourceSerifPro-SemiBold.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-weight: 300;
+  box-sizing: border-box;
+  font-family: 'Source Serif Pro', serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
