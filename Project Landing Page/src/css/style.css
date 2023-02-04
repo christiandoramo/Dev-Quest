@@ -1,19 +1,28 @@
+html {
+  font-size: 62.5%; 
+  /* FACILITA O CALCULO - convertendo a fonte do html em 10px agora só 
+  selecionar as fontes de acordo com 1rem que equivalem agora a 10px
+  logo 1.6rem = 16px */
+}
+
 body {
   max-width: 1440px;
   margin: 0 auto;
+  font-size: 1.6rem;
 }
 
 .cabecalho {
   padding: 30px 15px;
   position: relative;
+  margin-bottom: 20px;
 }
-.logo {
+.cabecalho .logo {
   background: url('../img/logo.jpg') center center no-repeat;
   width: 85px;
   height: 85px;
   display: inline-block;
 }
-.logo h1 {
+.cabecalho .logo h1 {
   display: none;
 }
 
@@ -49,6 +58,7 @@ body {
 .secao-com-texto {
   padding: 153px;
   text-align: center;
+  clear: both; /* gambiarra para o float não colar com elementos de fora */
 }
 .secao-com-texto img {
   width: 170px;
@@ -71,6 +81,9 @@ body {
   font-size: 28px;
 }
 
+.ladrilho div {
+  float: left;
+}
 
 .ladrilho .grande {
   background: url(../img/cafe2.jpg) center center no-repeat;
@@ -99,6 +112,7 @@ body {
   height: 600px;
   position: relative; /* é necessário para que o position absolute dos elementos filhas sejam 
   semmpre relativos a contato e não a body - queremos posicionar a div .contato .texto em relação ao section contato e não em relação ao body*/
+  margin-bottom: 0px;
 }
 .contato h2 {
   font-weight: 600;
@@ -130,6 +144,15 @@ body {
 .rodape ul li a:hover {
   font-weight: bold;
 }
+.rodape .logo {
+  background: url('../img/logo.jpg') center center no-repeat;
+  width: 85px;
+  height: 85px;
+  display: inline-block;
+}
+.rodape .logo h1 {
+  display: none;
+}
 
 .rodape .copyright {
   color: white;
@@ -145,11 +168,13 @@ body {
   float: right;
   clear: both; /*corrige espaçamento caso existe outro float por perto*/
 }
-.rodape .rodape-debaixo{
-  margin-top: 30px;
+.rodape .rodape-debaixo {
+  padding-top: 40px;
 }
 .rodape {
-  background-size: cover; /*para o background ocupar toda a div*/
   background: url(../img/fundo-rodape.jpg) center center no-repeat;
-  padding: 35px 30px;
+  /* BACKGROUND-SIZE TEM QUE VIR DEPOIS DE BACKGROUND */
+  /* BACKGROUND-SIZE TEM QUE VIR DEPOIS DE BACKGROUND SENÃO O BACKGROUND RESETA O BACKGROUND SIZE  COLOCADO ANTERIORMENTE*/
+  background-size: cover; /*para o background ocupar toda a div*/
+  padding: 30px 30px;
 }

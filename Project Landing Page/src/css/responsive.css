@@ -1,0 +1,103 @@
+@media (max-width: 992px) {
+  .secao-com-texto {
+    padding: 153px 25px;
+  }
+  .secao-com-texto p {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .contato .texto {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  .contato {
+    background: none;
+    background: linear-gradient(to right, #a98b5b, #d3ad71d0);
+  }
+  .contato h2 {
+    margin-bottom: 46px;
+  }
+}
+@media (max-width: 720px) {
+  .ladrilho .grande,
+  .ladrilho .medio {
+    width: 100%;
+  }
+  .ladrilho .pequeno.cafe,
+  .ladrilho .pequeno.grao {
+    width: 50%;
+  }
+
+  .rodape {
+    background-image: none;
+    background: linear-gradient(to right, #4b3621, #4b3621be);
+    text-align: center;
+  }
+  .rodape .logo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 41px;
+  }
+  .rodape ul {
+    display: block;
+    width: 100%;
+    margin-bottom: 61px;
+  }
+  .rodape ul li {
+    display: block;
+  }
+  .rodape ul li a{
+    font-size: 2rem;
+  }
+  .rodape .redes-sociais{
+    float: none;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cabecalho .logo {
+    display: block;
+    margin: 0 auto;
+  }
+  .cabecalho nav {
+    text-align: center;
+    position: static;
+    width: 100%;
+  }
+  .cabecalho nav ul li {
+    display: block;
+  }
+  .cabecalho nav ul li a {
+    width: 100%;
+    display: block;
+  }
+}
+@media (max-width: 425px) {
+  .painel {
+    font-size: 2.5rem;
+  }
+  .secao-com-texto h2 {
+    font-size: 3rem;
+  }
+  .secao-com-texto p,
+  .secao-com-texto#onde-estamos p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .ladrilho .pequeno.cafe,
+  .ladrilho .pequeno.grao {
+    width: 100%;
+  }
+  .contato .texto address{
+    font-size: 2rem;
+  }
+}
