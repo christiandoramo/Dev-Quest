@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Avançado</title>
+    <link rel="stylesheet" href="src/css/estilo.css" />
+    <link
+      rel="shortcut icon"
+      href="src/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <h2>
+      Iframe
+    </h2>
+    <h2>Sites embedados Iframe</h2>
+    <iframe style="display: inline-block" width="500" height="750" src="https://www.ufrpe.br/" frameborder="0"></iframe>
+    <iframe style="display: inline-block" width="500" height="750" src="../Project Landing Page/index.html" frameborder="0" ></iframe>
+    <h2>Video embedado Iframe</h2>
+    <!-- Prefirir SEMPRE pegar video do youtube/outras fontes que já economizam e tratam
+    o uso de dados do usuario sendo a opção mais inteligente em vez de obrigar o usuario a baixar os seus videos ou musicas - videos privados não podem ser embedados -->
+    <iframe
+      width="484"
+      height="363"
+      src="https://www.youtube.com/embed/jAVtcA_Kbks"
+      title="fernandovisk.avi - Uma Investigação Aterrorizante"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    >
+ 
+    </iframe>
+    <h2>Video</h2>
+    <!-- autoplay só funciona com o muted -->
+    <video width="400" poster="src/img/thumb.jpg" controls loop preload="auto">
+      <source src="src/video/video.mp4" />
+      <!-- <source src="src/video/video.ogg">
+        <source src="src/video/video.webm"> -->
+    </video>
+    <h2>Audio</h2>
+    <!-- Atualmente o autoplay do audio só funciona com javascript -->
+    <audio controls preload="metadata">
+      <source src="src/audio/audio.ogg" type="audio/ogg" />
+      <source src="src/audio/audio.wav" type="audio/wav" />
+      <source src="src/audio/audio.mp3" type="audio/mpeg" />
+      <p>não foi possível carregar o audio</p>
+    </audio>
+    <h2>Picture</h2>
+    <picture>
+      <source srcset="src/img/desktop.jpg" media="(min-width:768px)" />
+      <source srcset="src/img/tablet.jpg" media="(min-width:475px)" />
+      <img src="src/img/celular.jpg" alt="imagem" />
+    </picture>
+  </body>
+</html>
