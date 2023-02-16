@@ -1,29 +1,58 @@
-.primeira-letra{
-    line-height: 30px;
-}
-.primeira-letra::first-letter{
-    font-size: 40px;
-    font-weight: bold;
-    float: left;
-    color: red;
+:root {
+  --padrao-paragrafo: red;
+  --padrao: blue;
 }
 
-
-.primeira-linha::first-line{
-    color: blue;
-    font-weight: bolder;
-    font-style: italic;
-    clear: both;
+.primeira-letra {
+  line-height: 30px;
 }
-li::marker{
-    font-size: 30px;
-    color: yellow;
+.primeira-letra::first-letter {
+  font-size: 40px;
+  font-weight: bold;
+  float: left;
+  color: red;
 }
 
-h2::before, h2::after{
-    content: "";
-    display: inline-block;
-    background: url("../img/cafezin.jpg") center center no-repeat;
-    width: 85px;
-    height: 85px;
+.primeira-linha::first-line {
+  color: blue;
+  font-weight: bolder;
+  font-style: italic;
+  clear: both;
+}
+li::marker {
+  font-size: 30px;
+  color: yellow;
+}
+
+h2::before,
+h2::after {
+  content: '';
+  display: inline-block;
+  background: url('../img/cafezin.jpg') center center no-repeat;
+  width: 85px;
+  height: 85px;
+}
+
+.transformacao img {
+  width: 200px;
+  margin: 40px;
+}
+.transformacao img.scale {
+  transform: scale(3, 4);
+}
+.transformacao img.rotate {
+  transform: rotate(60deg);
+}
+.transformacao img.translate {
+  transform: translateY(150px);
+}
+
+.variaveis :nth-child(1) {
+  color: var(--padrao-paragrafoxx, var(--padrao));
+}
+.variaveis :nth-child(2) {
+  color: var(--padrao-paragrafo, blue);
+}
+.variaveis :nth-child(3) {
+  color: var(--padrao-paragrafosssssssss, var(--padrao-xxxx, orange));
 }
