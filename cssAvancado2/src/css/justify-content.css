@@ -1,0 +1,22 @@
+.container {
+  height: 300px;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+.center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.container.column {
+  flex-direction: column;
+}

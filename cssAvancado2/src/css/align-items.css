@@ -1,0 +1,41 @@
+.container {
+  height: 300px;
+}
+.flex-start {
+  align-items: flex-start;
+}
+
+.flex-end {
+  align-items: flex-end;
+}
+.center {
+  align-items: center;
+}
+.stretch {
+  align-items: stretch;
+}
+
+/* MANTÉM OS TEXTOS ALINHADOS INDEPENDENTE DO TAMANHO do texto, não é exatamente como está na página, o que está na "baseline" é o texto(no caso a base é a parte inferior) e não o bloco*/
+
+.baseline {
+  align-items: baseline;
+}
+.baseline .item {
+  flex-grow: 0.2;
+}
+.baseline .item1 {
+  /* flex: 0.2; */
+  font-size: 30px;
+}
+.baseline .item2 {
+  /* flex: 0.2; */
+  flex-grow: 0.2;
+}
+.baseline .item3 {
+  /* flex: 0.2; */
+  font-size: 5px;
+}
+
+.container.column {
+  flex-direction: column;
+}

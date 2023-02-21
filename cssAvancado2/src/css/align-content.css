@@ -1,0 +1,53 @@
+.container {
+  height: 300px;
+  flex-wrap: wrap;
+}
+
+.flex-start .item,
+.flex-end .item,
+.center .item,
+.stretch .item {
+  flex: 1;
+}
+
+.flex-start {
+  align-content: flex-start;
+}
+.flex-end {
+  align-content: flex-end;
+}
+.center {
+  align-content: center;
+}
+
+.stretch {
+  /* SE ESTENDE ATÉ O FINAL */
+  align-content: stretch;
+}
+
+.space-between {
+  /* O ESPAÇAMENTO É A PRIORIDADE POR ISSO ACONTECE O WRAP */
+  align-content: space-between;
+}
+.space-around {
+  align-content: space-around;
+}
+.space-evenly {
+  align-content: space-evenly;
+}
+
+.container.column {
+  flex-direction: column;
+}
+
+.space-between .item3::after,
+.space-around .item3::after,
+.space-evenly .item3::after {
+  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit';
+}
+
+.space-between.column .item3,
+.space-around.column .item3,
+.space-evenly.column .item3 {
+  width: 50%;
+}

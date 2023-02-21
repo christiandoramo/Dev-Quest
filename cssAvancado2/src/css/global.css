@@ -1,0 +1,33 @@
+*{
+  margin: 0 auto;
+  box-sizing: border-box;
+  color: wheat;
+}
+body{
+  background-color:black;
+  padding: 50px;
+}
+
+.container {
+  display: flex;
+  max-width: 400px;
+  border: 1px solid cyan;
+  background-color: rgb(12, 216, 243);
+  margin-bottom: 30px;
+}
+h1, section h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item {
+  background-color: rgb(203, 44, 44);
+  font-size: 20px;
+  margin: 5px;
+  text-align: center;
+}
+
+.justify-content .item1,
+.justify-content .item3 {
+  width: 80px;
+}
