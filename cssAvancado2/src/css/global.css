@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0 auto;
   box-sizing: border-box;
   color: wheat;
 }
-body{
-  background-color:black;
+body {
+  background-color: black;
   padding: 50px;
 }
 
@@ -15,7 +15,8 @@ body{
   background-color: rgb(12, 216, 243);
   margin-bottom: 30px;
 }
-h1, section h2{
+h1,
+section h2 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -31,3 +32,11 @@ h1, section h2{
 .justify-content .item3 {
   width: 80px;
 }
+
+/* 
+  - flex dos itens (conjunto dos 3) -
+  1 Flex-grow -> inteiro que define o grau de crescimento em relação aos outros
+  2 Flex-basis -> inteiro que define o grau de mudança de tamanho em relação aos outros
+  3 Flex-shrink -> inteiro que define o grau de encolhimento em relação aos outros
+
+*/
