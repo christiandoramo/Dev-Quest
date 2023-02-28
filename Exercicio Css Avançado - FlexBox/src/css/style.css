@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  color: black;
+}
+body {
+  margin: 30px;
+}
+menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+menu nav a {
+  display: block;
+  text-decoration: none;
+}
+
+menu nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 400px;
+}
+
+menu .logo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-grow: 2;
+  flex-shrink: 0;
+  flex-basis: 400px;
+}
+menu .sobre {
+  font-family: Public Sans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  background-color: #5bc241;
+  padding: 11px 6px;
+}
+menu .cadastre-se {
+    font-family: Public Sans;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #5bc241;
+    padding: 11px 21px;
+    border-radius: 10px;
+  }
+
+  @media screen {
+    @media(max-width:860px){
+        nav{
+            flex-direction: column;
+        }
+        nav a{
+            text-align: center;
+        }
+    }
+  }
