@@ -16,26 +16,22 @@ menu {
 }
 
 menu nav a {
-  display: block;
   text-decoration: none;
+  margin: 0 30px;
+  display: inline-block;
 }
 
 menu nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: 400px;
 }
 
 menu .logo {
   display: flex;
   align-items: center;
   justify-content: left;
-  flex-grow: 2;
-  flex-shrink: 0;
-  flex-basis: 400px;
+  flex: 0 0 150px;
 }
 menu .sobre {
   font-family: Public Sans;
@@ -49,25 +45,59 @@ menu .sobre {
   padding: 11px 6px;
 }
 menu .cadastre-se {
-    font-family: Public Sans;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: white;
-    background-color: #5bc241;
-    padding: 11px 21px;
-    border-radius: 10px;
-  }
+  font-family: Public Sans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  background-color: #5bc241;
+  padding: 11px 21px;
+  border-radius: 10px;
+}
 
-  @media screen {
-    @media(max-width:860px){
-        nav{
-            flex-direction: column;
-        }
-        nav a{
-            text-align: center;
-        }
+@media screen {
+  @media (max-width: 947px) {
+    menu {
+      flex-direction: column;
+      align-items: center;
+    }
+    menu .logo{
+      margin-bottom: 100px;
+      flex-basis: 0;
+    }
+    menu nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    menu nav a {
+      text-align: center;
+      margin-bottom: 50px;
+      font-family: Public Sans;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 47px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+    menu nav a.sobre {
+      padding: 17px 41px;
+      font-family: Public Sans;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 47px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+    menu nav a.cadastre-se {
+      padding: 15px 23px;
+      font-family: Public Sans;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: left;
     }
   }
+}
