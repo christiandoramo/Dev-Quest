@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
+  color: white;
+}
+menu .image-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-list h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.image-list h3 {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.image-list .image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 40px 20px;
+  height: 387px;
+  flex-basis: 300px;
+}
+.image-list > .image:nth-child(1) {
+  background: url("/src/img/Rome.jpg") center center no-repeat;
+}
+.image-list > .image:nth-child(2) {
+  background: url("/src/img/Boat at Sea.png") center center no-repeat;
+}
+.image-list > .image:nth-child(3) {
+  background: url("/src/img/Sand and Sea.png") center center no-repeat;
+}
+.image-list > .image:nth-child(4) {
+  background: url("/src/img/Starry Night.png") center center no-repeat;
+}
