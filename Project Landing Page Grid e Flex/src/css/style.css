@@ -1,180 +1,62 @@
 html {
-  font-size: 62.5%; 
-  /* FACILITA O CALCULO - convertendo a fonte do html em 10px agora só 
-  selecionar as fontes de acordo com 1rem que equivalem agora a 10px
-  logo 1.6rem = 16px */
+  font-size: 62.5%;
 }
 
 body {
-  max-width: 1440px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "hero hero hero hero"
+    "about about about about"
+    "services services services services"
+    "projects projects projects projects"
+    "footer footer footer footer";
+  grid-template-columns: repeat(4, fr);
   font-size: 1.6rem;
-}
-
-.cabecalho {
-  padding: 30px 15px;
-  position: relative;
-  margin-bottom: 20px;
-}
-.cabecalho .logo {
-  background: url('../img/logo.jpg') center center no-repeat;
-  width: 85px;
-  height: 85px;
-  display: inline-block;
-}
-.cabecalho .logo h1 {
-  display: none;
-}
-
-.cabecalho nav {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  margin-top: 30px;
-}
-.cabecalho ul li {
-  display: inline-block;
-  padding: 15px;
-}
-.cabecalho ul li a:hover {
-  font-weight: bold;
-}
-
-.painel h2 {
-  color: white;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 60px;
-  line-height: 75px;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-.painel {
-  background: url(../img/painel.jpg) center center no-repeat;
-  height: 600px;
+.header {
+  grid-area: header;
 }
-.secao-com-texto {
-  padding: 153px;
-  text-align: center;
-  clear: both; /* gambiarra para o float não colar com elementos de fora */
-}
-.secao-com-texto img {
-  width: 170px;
-  height: 170px;
-  margin-bottom: 70px;
+.header .header-container {
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-between;
+  align-items: center;
+  /* para não ficar tão pequeno no mobile */
+  min-height: 75px;
 }
 
-.secao-com-texto h2 {
-  font-size: 45px;
-  font-weight: 600;
-  margin-bottom: 37px;
-}
-.secao-com-texto p {
-  margin: 0 auto;
-  width: 702px;
-  font-size: 18px;
+.header h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  /* tempo de animações nesse elemento */
+  transition: 0.3s;
 }
 
-.secao-com-texto#onde-estamos p {
-  font-size: 28px;
+.header a:hover h1 {
+  color: coral;
 }
 
-.ladrilho div {
-  float: left;
+.hero {
+  grid-area: hero;
+  background-color: blue;
 }
-
-.ladrilho .grande {
-  background: url(../img/cafe2.jpg) center center no-repeat;
-  height: 600px;
-  width: 50%;
+.about {
+  grid-area: about;
+  background-color: goldenrod;
 }
-.ladrilho .pequeno.cafe {
-  background: url(../img/cafe1.jpg) center center no-repeat;
-  height: 300px;
-  width: 25%;
+.services {
+  grid-area: services;
+  background-color: pink;
 }
-.ladrilho .pequeno.grao {
-  background: url(../img/graos2.jpg) center center no-repeat;
-  height: 300px;
-  width: 25%;
+.projects {
+  grid-area: projects;
+  background-color: yellow;
 }
-.ladrilho .medio {
-  background: url(../img/graos1.jpg) center center no-repeat;
-  height: 300px;
-  width: 50%;
-}
-
-.contato {
-  background: url(../img/fundo-contato.jpg) center center no-repeat;
-  color: white;
-  height: 600px;
-  position: relative; /* é necessário para que o position absolute dos elementos filhas sejam 
-  semmpre relativos a contato e não a body - queremos posicionar a div .contato .texto em relação ao section contato e não em relação ao body*/
-  margin-bottom: 0px;
-}
-.contato h2 {
-  font-weight: 600;
-  font-size: 45px;
-  margin-bottom: 30px;
-}
-.contato address {
-  font-weight: 300;
-  font-size: 25px;
-}
-.contato .texto {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-}
-
-.rodape ul {
-  float: right;
-  margin-top: 30px;
-}
-.rodape ul li {
-  display: inline-block;
-  padding: 15px;
-}
-.rodape ul li a {
-  color: white;
-}
-
-.rodape ul li a:hover {
-  font-weight: bold;
-}
-.rodape .logo {
-  background: url('../img/logo.jpg') center center no-repeat;
-  width: 85px;
-  height: 85px;
-  display: inline-block;
-}
-.rodape .logo h1 {
-  display: none;
-}
-
-.rodape .copyright {
-  color: white;
-}
-
-.rodape .redes-sociais .facebook,
-.rodape .redes-sociais .instagram {
-  width: 20px;
-  height: 20px;
-  margin: 10px;
-}
-.rodape .redes-sociais {
-  float: right;
-  clear: both; /*corrige espaçamento caso existe outro float por perto*/
-}
-.rodape .rodape-debaixo {
-  padding-top: 40px;
-}
-.rodape {
-  background: url(../img/fundo-rodape.jpg) center center no-repeat;
-  /* BACKGROUND-SIZE TEM QUE VIR DEPOIS DE BACKGROUND */
-  /* BACKGROUND-SIZE TEM QUE VIR DEPOIS DE BACKGROUND SENÃO O BACKGROUND RESETA O BACKGROUND SIZE  COLOCADO ANTERIORMENTE*/
-  background-size: cover; /*para o background ocupar toda a div*/
-  padding: 30px 30px;
+.footer {
+  grid-area: footer;
+  background-color: cyan;
 }
