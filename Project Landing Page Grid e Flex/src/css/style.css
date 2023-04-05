@@ -40,6 +40,66 @@ body {
   color: coral;
 }
 
+.header .menu {
+  display: none;
+  width: 60px;
+  height: 60px;
+  /* alinha self sempre no final do fluxo row no caso */
+  align-self: flex-end;
+}
+
+.header nav label {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .hamburguer {
+  background-color: black;
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 30px;
+  transition: 0.5s ease-in-out;
+  top: 29px;
+  left: 15px;
+}
+
+.header .hamburguer:before,
+.header .hamburguer:after {
+  background-color: black;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+.header .hamburguer:before {
+  top: -10px;
+}
+.header .hamburguer:after {
+  bottom: -10px;
+}
+
+.header input {
+  display: none;
+}
+
+/* Estrutura se então no css??????? */
+.header input:checked ~ label .hamburguer {
+  transform: rotate(45deg);
+}
+/* Estrutura se então no css??????? */
+.header input:checked ~ label .hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+.header input:checked ~ label .hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
 .hero {
   grid-area: hero;
   background-color: blue;
@@ -59,4 +119,33 @@ body {
 .footer {
   grid-area: footer;
   background-color: cyan;
+}
+
+@media (max-width: 900px) {
+  .header .menu {
+    display: block;
+  }
+  .header input:checked ~ ul {
+    display: block;
+  }
+  .header nav {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    /* vai ficar por coma no eixo z (frente) */
+    z-index: 1;
+  }
+
+  .header nav ul {
+    display: none;
+    width: 200px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .header nav ul a {
+    text-align: center;
+    padding: 20px;
+    display: block;
+  }
 }
