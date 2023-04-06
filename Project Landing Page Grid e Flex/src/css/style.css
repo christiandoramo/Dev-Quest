@@ -5,15 +5,15 @@ html {
 body {
   display: grid;
   grid-template-areas:
-    "header header header header"
-    "hero hero hero hero"
-    "about about about about"
-    "services services services services"
-    "projects projects projects projects"
-    "footer footer footer footer";
-  grid-template-columns: repeat(4, fr);
+    'header header header header'
+    'hero hero hero hero'
+    'about about about about'
+    'services services services services'
+    'projects projects projects projects'
+    'footer footer footer footer';
+  grid-template-columns: repeat(4, 1fr);
   font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
@@ -67,7 +67,7 @@ body {
 .header .hamburguer:before,
 .header .hamburguer:after {
   background-color: black;
-  content: "";
+  content: '';
   display: block;
   width: 100%;
   height: 100%;
@@ -107,13 +107,16 @@ body {
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   position: relative;
 }
-.hero h2{
+.hero h2 {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 4rem;
+  padding: 20px;
+  text-align: center;
+
 }
 .hero:after {
   content: url('../img/seta_preta.png');
@@ -124,29 +127,113 @@ body {
   animation: downarrow 0.6s infinite alternate ease-in-out;
 }
 
-@-webkit-keyframes downarrow {
-  0% { -webkit-transform: translateY(0);
-  opacity: 0.4;}
-  100%  {-webkit-transform: translateY()0.4;
-    opacity: 0.9;}
+/* DOWNARROW É APENAS UM NOME QUALQUER */
+@keyframes downarrow {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY() 0.4;
+    opacity: 0.9;
+  }
 }
-
 .about {
   grid-area: about;
-  background-color: goldenrod;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  max-width: var(--max-width-size);
+  /* para sempre ficar no meio e não no canto esquerdo */
+  margin: 0 auto;
 }
+.about .item{
+  padding: 20%;
+  display: flex;
+  flex-direction: column;
+    /* alinha o conteudo vertical - por conta do flex-direction */
+  justify-content: center;
+  /* alinha o conteudo horizontal */
+  align-items: center;
+}
+.about .item h3{
+  font-weight: 700;
+  font-size: 4rem;
+}
+.about .item p{
+  font-size: 1.8rem;
+  margin: 30px 0;
+}
+
+.about .image {
+  height: 100%;
+  width: 100%;
+}
+
+.about .item .btn-saiba-mais{
+  font-size: 1.6rem;
+  transition: 0.2s ease-in-out;
+  /* align-self: flex-start; */
+}
+.about .item .btn-saiba-mais:hover{
+  font-weight:700;
+  color: red;
+  text-decoration-line:underline;
+}
+
+.about .image.right {
+  background: url('../img/bridge.jpg') center center no-repeat;
+  background-size: cover;
+}
+.about .image.left {
+  background: url('../img/sky.jpg') center center no-repeat;
+  background-size: cover;
+}
+
 .services {
   grid-area: services;
-  background-color: pink;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
+.services .service{
+  padding: 70px 20px;
+}
+.services .service img{
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+.services .service h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.services .service p{
+  font-size: 2rem;
+  font-weight: 400;
+  max-width: 400px;
+  margin: 20px auto 0;
+  line-height: 50px;
+}
+.services .service:nth-child(1){
+  background-color: lightblue;
+}
+.services .service:nth-child(2){
+background-color: lightpink;
+}
+
 .projects {
   grid-area: projects;
-  background-color: yellow;
+  background-color: darkmagenta;
 }
 .footer {
   grid-area: footer;
   background-color: cyan;
 }
+
+
+
+
 
 @media (max-width: 900px) {
   .header .menu {
@@ -177,11 +264,24 @@ body {
   }
 }
 
-@media(max-width: 425px){
-  .hero{
+@media (max-width: 425px) {
+  .hero {
     height: 60vh;
   }
-  .hero h2{
+  .hero h2 {
     font-size: 2.5rem;
+  }
+  .about .item{
+    text-align:center;
+  }
+  .about {
+    /* 1 coluna ocupando todo a altura */
+    grid-template-columns: 1fr;
+        /* 4 linhas ocupando toda a largura - assim: 1fr 1fr 1fr 1fr repeat siginifica meramente repetir 4 vezes o texto 1fr*/
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .services{
+    grid-template-columns:1fr;
+    /* uma coluna inteira */
   }
 }
