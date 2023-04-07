@@ -224,16 +224,66 @@ background-color: lightpink;
 
 .projects {
   grid-area: projects;
-  background-color: darkmagenta;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+.projects img{
+  /* a largura ja cocupa toda a linha por padrão width: 100%; */
+  height: 100%;
+  transition: 0.33s;
+}
+.projects a:hover img{
+  opacity:0.66;
+
 }
 .footer {
   grid-area: footer;
-  background-color: cyan;
+  display: flex;
+  background-color: lightgreen;
+  flex-direction: column;
+  text-align: center;
+  padding: 100px 0;
 }
 
+.footer h4{
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
+.footer nav{
+  margin: 50px 0;
+}
 
+.footer nav ul{
+  display:flex;
+  justify-content: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.footer nav ul li a{
+  font-weight: 500;
+  font-size: 2rem;
+  margin:20px;
+  transition: 0.3s;
 
+}
+.footer nav ul li a:hover{
+  font-weight:  700;
+  color: white;
+}
+.footer .social i {
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.footer .social a{
+margin: 20px;
+}
+.footer .social a:hover{
+  color: white;
+}
 
 @media (max-width: 900px) {
   .header .menu {
@@ -264,6 +314,14 @@ background-color: lightpink;
   }
 }
 
+/* TABLET */
+@media (max-width: 768px) {
+.projects{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2,1fr);
+}
+}
+
 @media (max-width: 425px) {
   .hero {
     height: 60vh;
@@ -280,8 +338,15 @@ background-color: lightpink;
         /* 4 linhas ocupando toda a largura - assim: 1fr 1fr 1fr 1fr repeat siginifica meramente repetir 4 vezes o texto 1fr*/
     grid-template-rows: repeat(4, 1fr);
   }
+  .projects{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+
   .services{
     grid-template-columns:1fr;
     /* uma coluna inteira */
   }
+
 }
