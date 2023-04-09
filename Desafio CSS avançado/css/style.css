@@ -1,0 +1,80 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  font-size: 1.6rem; /* tamanho = 1 */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.container{
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  'header header'
+  'main main'
+  'rodape rodape'
+  'extra extra';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: var( --Violet);
+  max-width: var(--max-width-size);
+}
+header{
+  grid-area: header;
+  width: 100%;
+  min-height: 75px;
+  display: flex;
+  padding: 20px 40px;
+  justify-content: space-between;
+}
+header .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: url('../images/logo.svg') center center no-repeat;
+}
+header .logo i{
+  font-size: 2.5rem;
+}
+header .logo h1{
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+main{
+  grid-area: main;
+  width: 100%;
+  display: flex;
+  height: 72vh;
+}
+.imagemDestaque{
+  width: 1fr;
+}
+.textoDestaque{
+  width: 600px;
+}
+.rodape{
+  grid-area: rodape;
+  width: 100%;
+}
+.extra{
+  grid-area: extra;
+}
+
+
+
+
+
+
+
+/* - Desktop: 1440px */
+/* - Mobile: 375px */
+@media(max-width: 375px){
+
+}
+
