@@ -1,0 +1,104 @@
+html {
+  font-size: 62.5%;
+}
+.container{
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.slide {
+  flex-shrink: 0;
+  margin: 0;
+  width: 100%;
+  height: 90%;
+  padding: 10% 0 10% 10%;
+}
+
+.slide .quadrado-imagem {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px;
+  width: 310px;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.slide .titulo-imagem {
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+.slide .descricao-imagem {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.slide .saiba-mais a {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #c50000;
+}
+
+.slide .saiba-mais a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+  cursor:pointer;
+  font-size: 2rem;
+  color: orange;
+}
+
+.slide.slide-1 {
+  background: url(../img/flores-rosas.jpg) center center no-repeat;
+  background-size: cover;
+}
+.slide.slide-2 {
+  background: url(../img/flores-verdes.jpg) center center no-repeat;
+  background-size: cover;
+}
+.slide.slide-3 {
+  background: url(../img/montanhas.jpg) center center no-repeat;
+  background-size: cover;
+}
+.slide.slide-4 {
+  background: url(../img/lago.jpg) center center no-repeat;
+  background-size: cover;
+}
+.setas{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 95%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: transparent;
+  border: none;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.seta-esquerda {
+  background: url(../img/seta.png) center center no-repeat;
+  background-size: contain;
+  rotate: 180deg;
+  width: 40px;
+  color: transparent;
+  border: none;
+  background-color: transparent;
+  opacity: 0.2;
+}
+
+.seta-direita {
+  background: url(../img/seta.png) center center no-repeat;
+  background-size: contain;
+  width: 40px;
+  color: transparent;
+  border: none;
+  background-color: transparent;
+}
