@@ -1,18 +1,15 @@
 html {
   font-size: 62.5%;
 }
+body {
+  background-color: cyan;
+  height: 100vh;
+  background-color: #e5e5e5;
+}
+
 .container {
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.card {
-  height: 347px;
-  width: 655px;
-  left: -279px;
-  top: -233px;
-  border-radius: 21px;
-  background-color: blue;
+  width: 100%;
 }
