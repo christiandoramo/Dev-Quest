@@ -2,14 +2,85 @@ html {
   font-size: 62.5%;
 }
 body {
-  background-color: cyan;
-  height: 100vh;
   background-color: #e5e5e5;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-  font-family: 'Roboto', sans-serif;
-  font-weight: normal;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container-card {
+  width: 655px;
+  min-height: 347px;
+  box-shadow: 0 27px 49px -25px rgb(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  /* Deixou como a POSICAO Relativa 
+os absolutos dos filhos são esse agora,
+ou seja relativisou as imagens
+as imagens estão presas a essa div
+e não mais a tela do usuario*/
+
+  position: relative;
+}
+.ilustracao {
+  /* Deixou com POSICAO Absolute 
+  em relação ao posicao relativa PAI - NATURAL é ser o BODY
+  mas aqui é .container-card */
+  position: absolute;
+  left: -90px;
+}
+.container-card .conteudo {
+  width: 90%;
+  /*Espaçamento Ficticio*/
+  padding-left: 225px;
+}
+.container-card .conteudo h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.container-card .items .item{
+  cursor: pointer;
+  background: url(../img/icone-seta-fechada.png) top 8px right 0 no-repeat;
+  background-size: 12px;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.container-card .items .item:last-child{
+  border-bottom: none;
+}
+.container-card .items .pergunta{
+  padding-bottom:  15px;
+  font-size: 17px;
+  width: 90%;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.container-card .pergunta:hover{
+  color: #f47c57;
+}
+.item .resposta{
+  display: none;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.container-card .items .item.ativo h2{
+  font-size: 17px;
+  font-weight: 700;
+}
+.container-card .items .item.ativo .resposta{
+  display: block;
+}
+.container-card .items .item.ativo{
+  background-image: url(../img/icone-seta-aberta.png);
 }
