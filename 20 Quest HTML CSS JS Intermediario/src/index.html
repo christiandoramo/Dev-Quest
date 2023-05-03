@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML CSS JS - INTERMEDIARIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="textoFundo">
+        <h2>
+          FICOU COM DÚVIDA?
+          <br />
+          NOS MANDE UMA MENSAGEM!
+        </h2>
+        <p>
+          caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e
+          entraremos em contato em menos de 24h.
+        </p>
+      </div>
+      <div class="formulario">
+        <div class="nomeCompleto">
+          <input
+            id="nomeCompleto"
+            placeholder="Nome Completo *"
+            type="text"
+            name="nomeCompleto"
+          />
+        </div>
+        <div class="email">
+          <input id="email" placeholder="Email  *" type="email" name="email" />
+        </div>
+        <div class="telefone">
+          <input
+            id="telefone"
+            placeholder="Telefone *"
+            type="number"
+            name="telefone"
+          />
+        </div>
+        <div class="mensagem">
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            cols="30"
+            rows="10"
+            placeholder="Mensagem *"
+          ></textarea>
+        </div>
+        <div class="avisoCamposObrigatorios">
+          <p>*campos obrigatórios</p>
+        </div>
+
+        <button onclick="enviar()">
+          Enviar
+        </button>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

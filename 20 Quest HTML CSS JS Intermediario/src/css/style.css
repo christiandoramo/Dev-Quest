@@ -1,0 +1,93 @@
+body {
+  display: flex;
+}
+.container {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: url('../img/bg-repeat.jpg') center center repeat;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 340px;
+  height: 378px;
+  padding: 20px;
+}
+.textoFundo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.textoFundo h2 {
+  margin-bottom: 10px;
+  width: 287px;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.textoFundo p {
+  width: 300px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+div input,
+div button {
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 35px;
+  width: 100%;
+  padding: 10px;
+}
+div textarea {
+  margin-bottom: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+}
+.avisoCamposObrigatorios{
+    align-self:flex-start;
+}
+.avisoCamposObrigatorios p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+
+
+
+div button {
+  cursor: pointer;
+  background: #3ccc87;
+  height: 40px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+  color: #ffffff;
+  transition: 0.5s ease-in-out;
+  padding: 10px;
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+button:hover {
+  background: #ffffff;
+  color: #3ccc87;
+}
