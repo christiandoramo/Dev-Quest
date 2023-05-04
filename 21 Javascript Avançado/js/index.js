@@ -53,4 +53,41 @@ console.log(objetoClonado);
 // com o OPERADOR SPREAD ... o objeto clonado aponta para outra referencia de memoria
 // portanto sendo apenas uma copia, e não uma referencia extra real
 */
-//aula 7
+//aula 7 - parametro REST - usa o operado Spread sempre no param final
+/*
+function comRest(msg, outro, ...plp) {
+  console.log(outro);
+  plp = plp.filter((p) => p.idade >= 22);
+  plp.map((p) => {
+    const { nome, idade } = p;
+    console.log(
+      `Mensagem: ${msg}, Para: ${nome}, estudante com Idade: ${idade}`
+    );
+  });
+}
+comRest("olá pessoa", "Acima de 22 anos", ...pessoas); // ...pessoas está retornando os itens de pessoas
+// aqui em vez de ...pessoas, poderia colocar pessoas[0], pessoas[1]...
+*/
+// aula 8 - SetInterval e SetTimeout
+/*let refIntervalo = setInterval(() => {
+  console.log("roda a cada segundo");
+}, 1000); // roda a cada 1 segundo
+let timeOut = setTimeout(() => {
+  console.log("passou 5 segundos");
+  clearInterval(refIntervalo, console.log("limpou interval"));
+  clearTimeout(timeOut, console.log("limpou timeout"));
+}, 5000);*/
+// aula 9 - Síncrono e Assíncrono
+// aula 10 - Promises
+/*
+return new Promise((resolve, reject) => {
+  resolve(); // retorna q deu certo
+  reject(); // retorna q deu errado
+});
+// isso para tratar exceções
+*/
+// aula 11 - then
+/*
+promessa.then().chamandoOutrafunção.then(). apos uma promise = só pode ser usado com promise
+// pois then primeiramente checa se foi retornou resolve ou reject na promise
+*/
