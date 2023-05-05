@@ -140,3 +140,13 @@ Ao mesmo tempo o tratamento do erro evita que o programa JS pare de funcionar
 */
 // aula 14 - API : "interface" de programação app
 // aula 15 - JSON : notação de objetos em JS
+// aulas 16,17,18 19 - npm
+/* 
+const pacote = requires("pacote")
+o fetch serve para usar APIs, e para isso é necessário consultar a documentação da API
+npm é usa apenas obrigatoriamente o node, o navegador (user side) n tem acesso
+npm install nomeDoPacote -- save , instala os node modules e salva no diretorio atual 
+npm install instala todos os node-modules necessarios citados no package.json
+import { função } from './caminhoDoArquivoApartirDaRootDoProjeto' - importação nomeada
+para usar o import no user side, é preciso indica o type="module" no html em script
+*/
