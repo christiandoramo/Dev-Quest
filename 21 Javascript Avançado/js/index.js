@@ -91,3 +91,52 @@ return new Promise((resolve, reject) => {
 promessa.then().chamandoOutrafunção.then(). apos uma promise = só pode ser usado com promise
 // pois then primeiramente checa se foi retornou resolve ou reject na promise
 */
+// aula 12 - async e await
+/*
+async torna uma função em assincrona
+await faz a função apenas retornar o resultado da promise e após o seu fim,
+senão será retornada toda a promise
+await só funciona c funções async
+*/
+// aula 13 - Tratamento de erros
+/*
+function liberarA() {
+  return new Promise((resolve, reject) => {
+    console.log("A");
+    resolve("A");
+  });
+}
+function liberarB() {
+  return new Promise((resolve, reject) => {
+    console.log("B");
+    resolve("B");
+  });
+}
+function liberarC() {
+  return new Promise((resolve, reject) => {
+    console.log("C");
+    resolve("C");
+  });
+}
+function liberadas() {
+  return new Promise((resolve, reject) => resolve(true));
+}
+async function liberaABC() {
+  let liberaC = liberarC();
+  const liberaA = await liberarA();
+  liberaC = await liberarC(liberaA);
+  const liberaB = await liberarB(liberaC);
+  liberaC = await liberarC(liberaB);
+  const liberar = await liberadas(liberaB);
+  if (liberar) console.log("A B C foram todas liberadas");
+}
+liberaABC();
+
+no try catch
+o reject recebe como parametro a Exception por exemplo uma mensagem de erro no paramentro ou throw 
+de nova uma exception
+lembrando que o reject é usado em uma função assincrona async
+Ao mesmo tempo o tratamento do erro evita que o programa JS pare de funcionar
+*/
+// aula 14 - API : "interface" de programação app
+// aula 15 - JSON : notação de objetos em JS
