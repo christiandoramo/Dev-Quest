@@ -20,7 +20,6 @@ export const PostsList = () => {
 
   return (
     <>
-      {" "}
       <MeuLink link="/">Voltar para Cards</MeuLink>
       <ul>
         {posts.map((post, index) => (
