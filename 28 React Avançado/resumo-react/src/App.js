@@ -1,10 +1,8 @@
-import Cards from "./components/cards";
-
+import AppRoutes from "./components/blog/routes";
 function App() {
   return (
     <>
-      <a href="#">Blog</a>
-      <Cards bgColor="blue" secao="Ai Zé da Manga" />
+      <AppRoutes />
     </>
   );
 }

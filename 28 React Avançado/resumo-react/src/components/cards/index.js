@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "../card";
 import drawCards from "../../services/card-service";
 import Form from "../form";
+import { MeuLink } from "../link";
 
 const Cards = (props) => {
   const [cartas, setCartas] = useState([]);
@@ -21,6 +22,7 @@ const Cards = (props) => {
 
   return (
     <>
+      <MeuLink>PIKOMON</MeuLink>
       <h1>{props.secao}</h1>
       <div style={{ backgroundColor: props.bgColor }}>
         <Form addCard={addCard} />

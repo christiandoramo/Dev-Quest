@@ -1,31 +1,39 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { MeuLink } from "../link";
+
+const portaAtual = 3000;
 
 async function getPosts() {
-  const resp = await fetch("http://localhost:3000/json/posts.json");
+  const resp = await fetch(`http://localhost:${portaAtual}/json/posts.json`);
+  // porta pode variar
   return await resp.json();
 }
 
-const PostsList = () => {
+export const PostsList = () => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    async function fetchData() {
-      const posts = await getPosts();
+    getPosts().then((posts) => {
       setPosts(posts.data);
-    }
+    });
   }, []);
 
   return (
-    <section>
-      <ol>
-        {posts.map((post, index) => {
+    <>
+      {" "}
+      <MeuLink link="/">Voltar para Cards</MeuLink>
+      <ul>
+        {posts.map((post, index) => (
+          // quando se usa { } é necessário usar return
+          // caso se use  ( ) já retorna automaticamente
           <li key={index}>
-            <img src={post.image}></img>
-            <h2>{post.title}</h2>
-          </li>;
-        })}
-      </ol>
-    </section>
+            <Link to={`/posts/${post.id}`}>
+              <img src={post.image} alt={post.title} />
+              <h2>{post.title}</h2>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
-
-export { PostsList };
