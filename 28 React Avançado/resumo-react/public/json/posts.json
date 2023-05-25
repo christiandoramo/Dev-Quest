@@ -1,0 +1,19 @@
+{
+    "data":[
+        {
+            "id":1,
+            "title": "Giratina",
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/487_f2.png"
+        },
+        {
+            "id": 2,
+            "title": "Darkrai",
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/491.png"
+        },
+        {
+            "id": 3,
+            "title":"Zekrom",
+            "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/644.png"
+        }
+    ]
+}
