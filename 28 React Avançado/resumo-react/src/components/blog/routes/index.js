@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Posts, Post } from "../posts";
-import Cards from "../../cards";
+import Cards from "../../cards/Cards";
 
 const AppRoutes = () => (
   <BrowserRouter>

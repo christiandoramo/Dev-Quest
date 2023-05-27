@@ -1,11 +1,12 @@
 import AppRoutes from "./components/blog/routes";
+import { ThemeProvider } from "./contexts/theme-context";
 
 function App() {
   return (
     <>
-      <ThemeContext.Provider>
+      <ThemeProvider>
         <AppRoutes />
-      </ThemeContext.Provider>
+      </ThemeProvider>
     </>
   );
 }

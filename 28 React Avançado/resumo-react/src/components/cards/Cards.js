@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Card from "../card";
 import drawCards from "../../services/card-service";
 import Form from "../form";
@@ -8,10 +8,13 @@ import styled from "styled-components";
 "npm install pacotedesejado@latest" e dps nom audit fix --force
 após isso vai funcionar - pois o npm n tava instalando a versão compativel
 com o meu node*/
-
-
+import { Menu } from "../menu";
+import { ThemeContext } from "../../contexts/theme-context";
+import { ButtonSemMenu } from "../buttons";
 
 const Cards = (props) => {
+  const { theme } = useContext(ThemeContext);
+
   const [cartas, setCartas] = useState([]);
 
   useEffect(() => {
@@ -29,10 +32,17 @@ const Cards = (props) => {
 
   return (
     <>
+      <Menu />
+      <ButtonSemMenu />
       <MeuLink>PIKOMON</MeuLink>
       <Section>
         <h1>{props.secao}</h1>
-        <div style={{ backgroundColor: props.bgColor }}>
+        <div
+          style={{
+            color: theme.color,
+            backgroundColor: theme.backgroundColor,
+          }}
+        >
           <Form addCard={addCard} />
           <ul>
             {cartas.map((item, index) => (
@@ -42,8 +52,8 @@ const Cards = (props) => {
                   value={item.value}
                   suit={item.suit}
                   image={item.image}
-                  bgColor={index % 2 === 0 ? "red" : "inherit"}
-                  // estilização condicional - if nao funfa bem
+                  // bgColor={index % 2 === 0 ? "red" : "blue"}
+                  // // estilização condicional - if nao funfa bem
                 />
               </li>
             ))}
@@ -55,7 +65,6 @@ const Cards = (props) => {
 };
 
 const Section = styled.section`
-  background-color: black;
   width: 50%;
   display: flex;
   flex-direction: column;

@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div style={{ backgroundColor: props.bgColor }}>
+    <div>
       <h3>{props.code}</h3>
       <img src={props.image} />
       <button
@@ -17,9 +17,8 @@ const Card = (props) => {
 Card.defaultProps = {
   code: "name genérico",
   value: "valor generico",
-  image: "descricao qualquer",
+  image: "http://placekitten.com/200/300",
   suit: "suitequalquer",
-  bgColor: "cyan",
 };
 
 export default Card;
