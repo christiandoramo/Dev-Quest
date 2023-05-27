@@ -9,15 +9,17 @@ import styled from "styled-components";
 após isso vai funcionar - pois o npm n tava instalando a versão compativel
 com o meu node*/
 
+
+
 const Cards = (props) => {
   const [cartas, setCartas] = useState([]);
 
   useEffect(() => {
     drawCards().then((cartas) => {
-      // quando o fetch for concluido set cartas causa efeito colateral
-      // assim os state é atualizado com as cartas novas setadas
       setCartas(cartas);
     });
+    // quando o fetch for concluido set cartas causa efeito colateral
+    // assim os state é atualizado com as cartas novas setadas
   }, []);
 
   const addCard = (newCard) => {

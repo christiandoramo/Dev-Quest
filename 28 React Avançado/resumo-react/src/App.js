@@ -1,8 +1,11 @@
 import AppRoutes from "./components/blog/routes";
+
 function App() {
   return (
     <>
-      <AppRoutes />
+      <ThemeContext.Provider>
+        <AppRoutes />
+      </ThemeContext.Provider>
     </>
   );
 }
