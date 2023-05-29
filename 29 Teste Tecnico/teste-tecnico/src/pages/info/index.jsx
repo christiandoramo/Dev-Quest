@@ -1,27 +1,36 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getPokemon } from "../../services";
+import { Link, useParams } from "react-router-dom";
+import { getPokemonById } from "../../services";
 
 const Info = (props) => {
   const [pokemon, setPokemon] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    getPokemon(id).then((data) => setPokemon(pokemon));
+    getPokemonById(id).then((pokemon) => setPokemon(pokemon));
   });
 
   return (
     <div>
-      {/* Imagem do pokemon
-            Nome
-            Lista de movimentos do pokemon (moves)
-            Lista de habilidades do pokemon (abilities)
-            a lista de habilidades deve apresentar o nome e o textodescritivo da habilidade
-            Tipo do pokemon (type) */}
-
-      <img src={pokemon.sprites.official_artwork.front_default} />
+      <Link to="/">Voltar</Link>
+      <img src={pokemon.image} />
       <h1>{pokemon.name}</h1>
-      <ul></ul>
-      <p>id</p>
+      <ul>
+        <h3>Movies</h3>
+        <li></li>
+      </ul>
+      <ul>
+        <h3>Abilities</h3>
+        <li>
+          <div>
+            <h4>Nome</h4>
+            <p>Descrição</p>
+          </div>
+        </li>
+      </ul>
+      <ul>
+        <h3>Type</h3>
+        <li></li>
+      </ul>
     </div>
   );
 };
