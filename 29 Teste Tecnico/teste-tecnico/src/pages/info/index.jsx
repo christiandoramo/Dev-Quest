@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { getPokemon } from '../services'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getPokemon } from "../../services";
 
-export const Info = (props) => {
-  const [pokemon, setPokemon] = useState({})
-  const { id } = useParams()
+const Info = (props) => {
+  const [pokemon, setPokemon] = useState({});
+  const { id } = useParams();
   useEffect(() => {
-    setPokemon(pokemon)
-  })
+    getPokemon(id).then((data) => setPokemon(pokemon));
+  });
 
   return (
     <div>
@@ -20,10 +20,10 @@ export const Info = (props) => {
 
       <img src={pokemon.sprites.official_artwork.front_default} />
       <h1>{pokemon.name}</h1>
-      <ul>
-        
-      </ul>
+      <ul></ul>
       <p>id</p>
     </div>
-  )
-}
+  );
+};
+
+export default Info;

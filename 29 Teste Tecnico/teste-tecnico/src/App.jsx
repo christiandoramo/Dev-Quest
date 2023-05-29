@@ -1,12 +1,12 @@
-import { AppRoutes } from './routes'
-
+import AppRoutes from "./routes";
 
 function App() {
   return (
     <>
-    <AppRoutes/>
+      <h1>ola</h1>
+      <AppRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
