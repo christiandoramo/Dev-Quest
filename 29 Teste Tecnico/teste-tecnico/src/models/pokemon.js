@@ -4,9 +4,9 @@ const Pokemon = {
       id,
       name,
       image,
-      moves,
-      abilities,
-      type,
+      moves: [],
+      abilities: [],
+      type: [],
     };
   },
 };
