@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getMorePokemons, getPokemons } from "../../services";
+import { getMorePokemons } from "../../services";
 import { BtnVerMais } from "../../components/buttons";
 
 const Home = (props) => {
+  const range = 10;
   const [pokemons, setPokemon] = useState([]);
   useEffect(() => {
-    // missao futura - salvar a lista de pokemons adicionados no cookies com json
-    getPokemons(10).then((data) => {
-      setPokemon(data);
-    });
+    getMorePokemons(range, offset).then((pokemons) => setPokemon(pokemons));
   }, []);
 
   const addPokemons = async () => {
-    const more = await getMorePokemons(10);
-    setPokemon([...pokemons, ...more]);
+    const pokemonsCurrent = await getMorePokemons(range, offset);
+    offset += 10;
+    setPokemon([...pokemons, ...pokemonsCurrent]);
   };
 
   return (
     <>
-      <h1>Os Pikomon</h1>
+      <h1>Lista de Pokémons</h1>
       <BtnVerMais addPokemons={addPokemons} />
       <ul>
         {pokemons.map((pokemon, index) => (

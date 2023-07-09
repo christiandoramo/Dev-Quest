@@ -1,12 +1,11 @@
 const Pokemon = {
-  create(id, name, image, moves, abilities, type) {
+  create(id, name, image, abilities, types) {
     return {
       id,
       name,
       image,
-      moves: [],
-      abilities: [],
-      type: [],
+      abilities,
+      types: [],
     };
   },
 };
