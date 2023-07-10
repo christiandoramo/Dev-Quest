@@ -32,11 +32,20 @@ const Info = (props) => {
             ))}
         </ul>
 
+        <h3>Moves</h3>
+        <ul>
+          {pokemon.moves &&
+            pokemon.moves.map((move) => (
+              <li>
+                <h4>{move.name}</h4>
+                <p>{move.effect}</p>
+              </li>
+            ))}
+        </ul>
+
         <h3>Type</h3>
         <ul>
-          {/* {pokemon.types.map((type) => (
-          <li>{type.name}</li>
-        ))} */}
+          {pokemon.types && pokemon.types.map((type) => <li>{type.name}</li>)}
         </ul>
       </div>
     </div>

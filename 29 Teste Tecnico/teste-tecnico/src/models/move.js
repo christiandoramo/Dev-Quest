@@ -1,4 +1,4 @@
-const Ability = {
+const Move = {
   create(name, effect) {
     return {
       name,
@@ -7,4 +7,4 @@ const Ability = {
   },
 };
 
-export default Ability;
+export default Move;

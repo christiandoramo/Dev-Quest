@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { getMorePokemons } from "../../services";
 import { BtnVerMais } from "../../components/buttons";
+import { PokemonContext } from "../../contexts";
 
-const Home = (props) => {
-  const range = 10;
-  const [pokemons, setPokemon] = useState([]);
-  useEffect(() => {
-    getMorePokemons(range, offset).then((pokemons) => setPokemon(pokemons));
-  }, []);
-
-  const addPokemons = async () => {
-    const pokemonsCurrent = await getMorePokemons(range, offset);
-    offset += 10;
-    setPokemon([...pokemons, ...pokemonsCurrent]);
-  };
-
+var offset = 0;
+const Home = () => {
+  const { pokemons, loadMorePokemons } = useContext(PokemonContext);
   return (
     <>
       <h1>Lista de Pokémons</h1>
-      <BtnVerMais addPokemons={addPokemons} />
+      <BtnVerMais addPokemons={loadMorePokemons} />
       <ul>
         {pokemons.map((pokemon, index) => (
           <li key={index}>
